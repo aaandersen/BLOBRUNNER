@@ -76,23 +76,17 @@ function initialize() {
 
     // BlobEatable
     for (var i = 0; i < NUMBER_OF_EATABLES; i++) {
-        const x = random(-windowWidth + BLOB_DIAMETER, windowWidth - BLOB_DIAMETER)
-        const y = random(-windowHeight + BLOB_DIAMETER, windowHeight - BLOB_DIAMETER)
-        blobs.push(new BlobEatable(x, y, BLOB_RADIUS))
+        spawnBlob(BlobEatable)
     }
 
     // BlobPoisonous
     for (var i = 0; i < NUMBER_OF_POISONOUS; i++) {
-        const x = random(-windowWidth + BLOB_DIAMETER, windowWidth - BLOB_DIAMETER)
-        const y = random(-windowHeight + BLOB_DIAMETER, windowHeight - BLOB_DIAMETER)
-        blobs.push(new BlobPoisonous(x, y, BLOB_RADIUS))
+       spawnBlob(BlobPoisonous)
     }
 
     // BlobDeadly
     for (var i = 0; i < NUMBER_OF_DEADLY; i++) {
-        const x = random(-windowWidth + BLOB_DIAMETER, windowWidth - BLOB_DIAMETER)
-        const y = random(-windowHeight + BLOB_DIAMETER, windowHeight - BLOB_DIAMETER)
-        blobs.push(new BlobDeadly(x, y, BLOB_RADIUS))
+        spawnBlob(BlobDeadly)
     }
 
     //Sætter gameState til playing
