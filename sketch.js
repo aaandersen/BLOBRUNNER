@@ -109,7 +109,7 @@ function initialize() {
 
 function draw() {
     // B A C K G R O U N D
-    background(255);
+    background('grey');
 
     push()
     // L O G I C
